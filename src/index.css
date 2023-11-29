@@ -7,19 +7,38 @@
 
 
 .containertable td, th{
-  padding:15px 13px;
+  padding:10px 13px;
   border: 0.5px solid rgb(170, 170, 170);
+
+}
+
+
+
+.busqueda input{
+  height: 33px;
+  border-radius: 5px;
+  border: 1px solid black;
   text-align: center;
-  width: 500px;
+}
+
+.busqueda label {
+  font-size: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-radius: 5px;
+  padding: 0px 10px;
 }
 
 .containertable th{
  text-align: left;
  padding:15px 13px;
+ width: 10%;
 }
 
-.containertable td, th:first-child{
-  width: 10px;
+.tbutton{
+  display: flex;
+  justify-content: space-around;
 }
 
 
@@ -27,10 +46,13 @@
 .crear{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 30px 20px;
   background-color: hsl(172, 64%, 54%);
   padding: 10px;
 }
+
+
 
 .crear h3{
   padding-top: 4px;

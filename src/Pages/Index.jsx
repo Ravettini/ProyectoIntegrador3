@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Productcard } from '../Components/Productcard';
+import { Productcard } from '../Components/ProductCard';
 import { Navxd } from '../Components/Navxd';
 import { Main } from '../Components/Main';
 import '../index.css'
@@ -58,12 +58,15 @@ const Index = () => {
     <Navxd/>
     <div className='MainBorder'>
       <Main/>
+      <div className='d-flex pb-3 busqueda justify-content-center'>
+        <label><i class="fa-solid fa-magnifying-glass"></i></label>
       <input
         type="text"
-        placeholder="Buscar productos por nombre"
+        placeholder='Busqueda por nombre'
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      </div>
       <div className="containertable">
     <table>
       <thead>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, Form } from 'react-bootstrap';
 
-function DeleteButton({ productId }) {
+function DeleteButton({ productId, handleDelete }) {
   const [showModal, setShowModal] = useState(false);
 
-  const handleDelete = () => {
+  const handleConfirmDelete = () => {
     fetch(`http://localhost:3000/productos/delete/${productId}`, {
       method: 'DELETE',
     })
@@ -23,7 +23,9 @@ function DeleteButton({ productId }) {
       .then((data) => {
         // Hacer algo con los datos si es necesario
       })
-      .catch((error) => console.error('Error al eliminar el producto:', error));
+      .catch((error) =>
+        console.error('Error al eliminar el producto:', error)
+      );
   };
 
   return (
@@ -31,26 +33,23 @@ function DeleteButton({ productId }) {
       <Button
         variant="danger"
         onClick={() => setShowModal(true)}
-        style={{
-          
-        }}
+        style={{}}
       >
-        Eliminar
+        <i className="fa-solid fa-x"></i> Eliminar
       </Button>
-
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
-          <Modal.Title>Confirmación de eliminación</Modal.Title>
+          <Modal.Title>Eliminar</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           ¿Estás seguro de que deseas eliminar el siguiente elemento?
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
-            No
+          <Button variant="success" onClick={handleConfirmDelete}>
+            Confirmar
           </Button>
-          <Button variant="danger" onClick={handleDelete}>
-            Sí
+          <Button variant="secondary" onClick={() => setShowModal(false)}>
+            Cancelar
           </Button>
         </Modal.Footer>
       </Modal>
