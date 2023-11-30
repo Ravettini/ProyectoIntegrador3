@@ -32,7 +32,7 @@ const Vista = ({ product }) => {
   return (
     <div>
       <Button variant="primary" onClick={handleShow}>
-        Ver detalles
+        Ver <i class="fa-solid fa-eye"></i>
       </Button>
 
       <Modal show={showModal} onHide={handleClose}>

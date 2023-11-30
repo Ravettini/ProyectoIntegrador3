@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../index.css';
-import { Navxd } from './Navxd';
+
 import Create from '../Pages/Create';
 
 export const Main = () => {

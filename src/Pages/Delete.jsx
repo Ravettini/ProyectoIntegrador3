@@ -35,7 +35,7 @@ function DeleteButton({ productId, handleDelete }) {
         onClick={() => setShowModal(true)}
         style={{}}
       >
-        <i className="fa-solid fa-x"></i> Eliminar
+        Eliminar <i className="fa-solid fa-x"></i>
       </Button>
       <Modal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>

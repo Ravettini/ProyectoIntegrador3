@@ -58,7 +58,7 @@ const Update = ({ productId,nombre,descripcion,precio,stock }) => {
   return (
     <div>
       <Button variant="warning" onClick={handleOpenModal}>
-      <i class="fa-solid fa-pencil"></i> Editar
+      Editar <i class="fa-solid fa-pencil"></i>
       </Button>
       <Modal show={showModal} onHide={handleCloseModal}>
         <Modal.Header closeButton>
