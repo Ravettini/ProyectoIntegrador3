@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 export const Navxd = () => {
  
@@ -21,12 +22,14 @@ export const Navxd = () => {
         <div className="container-fluid">
           <span className={`navbar-text ${isScrolled ? "navbar-text-scrolled" : ""}`}>StockMasters</span>
           <div className="botonesnav">
-            <a className="btn btn-success" href="Home">
+            <NavLink className="btn btn-success" to="/">
               Home
-            </a>
-            <a className="btn btn-primary" href="">
+            </NavLink>
+
+            <NavLink className="btn btn-primary" to="/Stock">
               Acceder
-            </a>
+            </NavLink>
+
           </div>
         </div>
       </nav>
